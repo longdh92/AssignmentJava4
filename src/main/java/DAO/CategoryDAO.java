@@ -31,6 +31,7 @@ public class CategoryDAO {
 		}
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public List<Category> getAllCategories() {
 		Session session = null;
 		Transaction transaction = null;
@@ -62,8 +63,10 @@ public class CategoryDAO {
 		return null;
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public Category findByName(String categoryName) {
 		Session session = null;
+		@SuppressWarnings("unused")
 		Transaction transaction = null;
 		List<Category> list = null;
 		try {

@@ -30,6 +30,7 @@ public class CartDetailDAO {
 		}
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public List<CartDetail> getAllCartDetail() {
 		Session session = null;
 		Transaction transaction = null;

@@ -27,6 +27,7 @@ public class ProductDAO {
 		}
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public List<Product> getAllProducts() {
 		Session session = null;
 		Transaction transaction = null;
@@ -60,8 +61,10 @@ public class ProductDAO {
 		return null;
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public Product findByName(String productName) {
 		Session session = null;
+		@SuppressWarnings("unused")
 		Transaction transaction = null;
 		List<Product> list = null;
 		try {

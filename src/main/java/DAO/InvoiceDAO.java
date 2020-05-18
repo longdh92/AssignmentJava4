@@ -30,6 +30,7 @@ public class InvoiceDAO {
 		}
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public List<Invoice> getAllInvoice() {
 		Session session = null;
 		Transaction transaction = null;

@@ -30,6 +30,7 @@ public class UserDao {
 		}
 	}
 
+	@SuppressWarnings(value = { "unchecked" })
 	public List<User> getAllUser() {
 		Session session = null;
 		Transaction transaction = null;
@@ -64,9 +65,10 @@ public class UserDao {
 	}
 	
 
-
+	@SuppressWarnings(value = { "unchecked" })
 	public User findByUsername(String username) {
 		Session session = null;
+		@SuppressWarnings("unused")
 		Transaction transaction = null;
 		List<User> list = null;
 		try {
